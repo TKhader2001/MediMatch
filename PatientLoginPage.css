@@ -1,3 +1,15 @@
+
+/* You may also need to adjust other elements to maintain the layout */
+.form-full,
+.full-white-frame {
+  transform: translateX(-100px);
+  transform: scale(0.9);
+}
+.form-full,
+.error-patient-input  {
+  transform: translateX(-50px);
+}
+
 .blue-background1 {
   position: absolute;
   top: 124px;
@@ -82,13 +94,13 @@
 }
 .error-patient-input {
   position: absolute;
-  top: 790px;
-  left: 704px;
+  top: 730px;
+  left: 654px;
   line-height: 100%;
   display: flex;
   align-items: center;
-  width: 32px;
-  height: 20px;
+  width: 182px;
+  height: 10px;
 }
 .enter-patient-id,
 .welcome-text {
@@ -147,26 +159,6 @@
   padding: var(--padding-base);
   box-sizing: border-box;
 }
-.delete-dont-have,
-.delete-sign-up {
-  position: relative;
-  font-size: var(--body-large-semibold-size);
-  line-height: 100%;
-  text-transform: capitalize;
-  font-family: var(--heading-4-14);
-  color: var(--foreground-low);
-  text-align: left;
-}
-.delete-sign-up {
-  color: var(--container-primary);
-}
-.delete-frame-29 {
-  display: none;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 8px;
-}
 .button-box-effect-all {
   cursor: pointer;
   border: 0;
@@ -197,13 +189,14 @@
 }
 .frame2 {
   position: absolute;
-  top: 294px;
+  top: 234px;
   left: 364px;
   width: 712px;
   overflow: hidden;
   align-items: flex-start;
   font-size: var(--body-large-semibold-size);
   color: #0f0f0f;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 .login-page-text1 {
   position: relative;
@@ -228,6 +221,7 @@
 .header-text2 {
   align-self: stretch;
   position: relative;
+  transform: translateX(-60px);
 }
 .header-blue-background-box {
   position: absolute;
@@ -254,4 +248,38 @@
   font-size: var(--heading-4-14-size);
   color: var(--color-black);
   font-family: var(--heading-4-14);
+}
+/* Default styles */
+
+/* Styles for screens smaller than 600px (e.g., smartphones) */
+@media only screen and (max-width: 600px) {
+  /* Adjust styles for smaller screens */
+  .form-full,
+  .full-white-frame {
+    transform: none; /* Reset the transform */
+    width: 100%; /* Make elements full width */
+  }
+  .form-full,
+  .error-patient-input {
+    transform: none; /* Reset the transform */
+  }
+  .frame2 {
+    width: calc(100% - 40px); /* Adjust width for smaller screens */
+    left: 20px; /* Center horizontally */
+  }
+  .header-text2 {
+    transform: none; /* Reset the transform */
+  }
+}
+
+/* Styles for screens larger than 600px (e.g., iPhones in landscape mode) */
+@media only screen and (min-width: 601px) {
+  /* Adjust styles for larger screens */
+  .frame2 {
+    width: 712px; /* Reset width for larger screens */
+    left: calc(50% - 356px); /* Center horizontally */
+  }
+  .header-text2 {
+    transform: translateX(-60px); /* Adjust the header text position */
+  }
 }
