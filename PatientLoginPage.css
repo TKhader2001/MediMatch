@@ -254,24 +254,34 @@
 /* Styles for screens smaller than 600px (e.g., smartphones) */
 @media only screen and (max-width: 600px) {
   /* Adjust styles for smaller screens */
+  .blue-background1,
+  .white-background-navbar,
+  .frame,
+  .frame1,
+  .full-white-frame,
+  .error-patient-input,
   .form-full,
-  .full-white-frame {
-    transform: none; /* Reset the transform */
+  .frame2,
+  .header-blue-background-box,
+  .nav-pages1 {
     width: 100%; /* Make elements full width */
+    left: 0; /* Reset left position */
   }
-  .form-full,
-  .error-patient-input {
-    transform: none; /* Reset the transform */
+  .blue-background1,
+  .white-background-navbar {
+    position: relative; /* Reset position */
+    top: 0; /* Reset top position */
+    border-radius: 0; /* Reset border radius */
   }
+  .header-blue-background-box {
+    padding: 9px 20px; /* Adjust padding */
+  }
+  .frame,
+  .frame1,
   .frame2 {
-    width: calc(100% - 40px); /* Adjust width for smaller screens */
-    left: 20px; /* Center horizontally */
-  }
-  .header-text2 {
-    transform: none; /* Reset the transform */
+    position: static; /* Reset position */
   }
 }
-
 /* Styles for screens larger than 600px (e.g., iPhones in landscape mode) */
 @media only screen and (min-width: 601px) {
   /* Adjust styles for larger screens */
