@@ -283,13 +283,4 @@
   }
 }
 /* Styles for screens larger than 600px (e.g., iPhones in landscape mode) */
-@media only screen and (min-width: 601px) {
-  /* Adjust styles for larger screens */
-  .frame2 {
-    width: 712px; /* Reset width for larger screens */
-    left: calc(50% - 356px); /* Center horizontally */
-  }
-  .header-text2 {
-    transform: translateX(-60px); /* Adjust the header text position */
-  }
-}
+
