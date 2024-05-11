@@ -371,10 +371,11 @@ def check_patient_id(patient_input: PatientInput):
     else:
         # If patient ID does not exist, return an error message
         raise HTTPException(status_code=404, detail="Patient ID not found")
-    reset_global_variables()
+
 # Define endpoint to serve data
 @app.get("/patient_data")
 def get_patient_data():
+    
     x =  {
         "height": get_first_element(height_data, "RATE","DateTimeTaken"),
         "weight": (get_first_element(weight_data, "RATE","DateTimeTaken")),
@@ -391,12 +392,13 @@ def get_patient_data():
         "Latest_Dosage": (MedicationsView_data["Dosage"].iloc[0]),
         "Latest_Medication":(MedicationsView_data["DrugGenericName"].iloc[0])
     }
+    reset_global_variables()
     return x
 
 # Main function to run the FastAPI application
 def main():
     
     uvicorn.run(app, host="0.0.0.0", port=8000)
-
+    
 if __name__ == "__main__":
     main()

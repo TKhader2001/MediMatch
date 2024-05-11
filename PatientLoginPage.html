@@ -33,7 +33,7 @@
         <div class="blue-line-under-login-page"></div>
       </div>
       <div class="full-white-frame"></div>
-      <div class="error-patient-input">Error</div>
+      <div class="error-patient-input" id="error-message"></div>
       <div class="frame2">
         <div class="form-full">
           <div class="welcome-box">
@@ -83,7 +83,12 @@
                   },
                   body: JSON.stringify(requestBody)
               })
-                  .then(response => response.json())
+                  .then(response => {
+                     if (!response.ok) {
+                        throw new Error('Patient ID not found');
+                     }
+                     return response.json();
+                  })
                   .then(data => {
                       // Handle the response data as needed
                       console.log(data);
@@ -91,8 +96,7 @@
                       window.location.href = "./PatientPageNew.html";
                   })
                   .catch(error => {
-                      // Handle errors
-                      console.error('Error:', error);
+                      document.getElementById('error-message').innerText = error.message;
                   });
           };
   
