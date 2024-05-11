@@ -1,3 +1,12 @@
+.form-full-box,
+.white-background-box {
+  transform: translateX(-100px);
+  transform: scale(0.9);
+}
+.form-full-box,
+.error-login-input {
+  transform: translateX(-50px);
+}
 @keyframes shadow-drop-bottom {
   0% {
     box-shadow: 0 0 0 0 transparent;
@@ -90,7 +99,7 @@
 .error-login-input {
   position: absolute;
   top: 758px;
-  left: 704px;
+  left: 614px;
   line-height: 100%;
 }
 .title-login-to {
@@ -237,7 +246,7 @@
 .header-text {
   position: absolute;
   top: 9px;
-  left: 269px;
+  left: 169px;
   display: inline-block;
   width: 994px;
 }
@@ -261,4 +270,49 @@
   font-size: var(--heading-4-14-size);
   color: var(--color-black);
   font-family: var(--heading-4-14);
+}
+@media only screen and (max-width: 600px) {
+  /* Adjust styles for smaller screens */
+  .blue-background,
+  .white-navbar-background,
+  .navbar-box {
+    width: 100%;
+    left: 0;
+  }
+  .header-box {
+    width: 100%;
+    left: 0;
+  }
+  .logo-box-icon {
+    position: relative;
+    top: unset;
+    right: unset;
+    bottom: unset;
+    left: unset;
+    width: 50%; /* Adjust size for smaller screens */
+    height: auto; /* Keep aspect ratio */
+    max-width: 100%; /* Ensure it doesn't overflow */
+  }
+  .medimatch2 {
+    width: 100%;
+    left: 0;
+    text-align: center; /* Center align text */
+  }
+  .form-full-box {
+    position: relative; /* Reset position */
+    top: unset;
+    left: unset;
+    width: 90%; /* Adjust width for smaller screens */
+    max-width: 400px; /* Limit maximum width */
+    margin: 0 auto; /* Center the form */
+    padding: 20px; /* Add padding */
+    box-sizing: border-box; /* Ensure padding is included in width */
+  }
+  .error-login-input {
+    transform: unset; /* Reset transform */
+    position: relative; /* Reset position */
+    top: unset;
+    left: unset;
+    margin-left: 10px; /* Add margin for spacing */
+  }
 }
