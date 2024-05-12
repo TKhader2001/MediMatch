@@ -206,7 +206,9 @@
         document.getElementById("hypertensionOutput").innerText = data.hypertension ? "True" : "False";
         document.getElementById("diabetesOutput").innerText = data.diabetes ? "True" : "False";
         document.getElementById("patientIdOutput").innerText = data.patient_id;
-        document.getElementById("lifestylePlanOutput").innerText = data.recommendation;
+        const recommendationList = data.recommendation;
+        const recommendationParagraphs = recommendationList.map(recommendation => `<p>${recommendation}</p>`);
+        document.getElementById("lifestylePlanOutput").innerHTML = data.recommendation.join('\n');
         document.getElementById("latestDosageOutput").innerText = data.Latest_Dosage;
         document.getElementById("latestMedicationOutput").innerText = data.Latest_Medication;        
       })

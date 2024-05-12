@@ -97,61 +97,61 @@ def generate_recommendation(patient_data, medications_data, blood_pressure_data,
     
     # Generate recommendations based on patient demographics and health status
     if diabetes == 1:
-        recommendations.append("For diabetes management, focus on a balanced diet with plenty of fruits, vegetables, whole grains, and lean proteins. Avoid sugary drinks and snacks.")
+        recommendations.append("-For diabetes management, focus on a balanced diet with plenty of fruits, vegetables, whole grains, and lean proteins. Avoid sugary drinks and snacks.")
         if age <= 12:
-            recommendations.append("Encourage outdoor activities like biking or playing sports to stay active and maintain healthy blood sugar levels.")
-            recommendations.append("Limit screen time and opt for physical games or activities to promote movement.")
-            recommendations.append("Hydrate with water instead of sugary beverages.")
+            recommendations.append("-Encourage outdoor activities like biking or playing sports to stay active and maintain healthy blood sugar levels.")
+            recommendations.append("-Limit screen time and opt for physical games or activities to promote movement.")
+            recommendations.append("-Hydrate with water instead of sugary beverages.")
         elif 13 <= age <= 18:
-            recommendations.append("Engage in regular exercise such as swimming, jogging, or playing sports to help manage blood sugar levels.")
-            recommendations.append("Choose nutritious snacks like fruits, nuts, or yogurt over processed snacks.")
-            recommendations.append("Monitor blood sugar levels regularly and keep a record of meals and physical activity.")
+            recommendations.append("-Engage in regular exercise such as swimming, jogging, or playing sports to help manage blood sugar levels.")
+            recommendations.append("-Choose nutritious snacks like fruits, nuts, or yogurt over processed snacks.")
+            recommendations.append("-Monitor blood sugar levels regularly and keep a record of meals and physical activity.")
         elif 19 <= age <= 40:
-            recommendations.append("Incorporate strength training exercises like weightlifting or bodyweight exercises into your routine to improve insulin sensitivity and muscle health.")
-            recommendations.append("Experiment with different forms of physical activity such as dance classes, hiking, or martial arts to keep exercise enjoyable and engaging.")
-            recommendations.append("Focus on meal timing and distribution to help manage blood sugar levels, such as eating smaller, balanced meals every 3-4 hours.")
+            recommendations.append("-Incorporate strength training exercises like weightlifting or bodyweight exercises into your routine to improve insulin sensitivity and muscle health.")
+            recommendations.append("-Experiment with different forms of physical activity such as dance classes, hiking, or martial arts to keep exercise enjoyable and engaging.")
+            recommendations.append("-Focus on meal timing and distribution to help manage blood sugar levels, such as eating smaller, balanced meals every 3-4 hours.")
         elif 41 <= age <= 60:
-            recommendations.append("Explore mindful eating practices such as paying attention to hunger cues, practicing portion control, and savoring each bite to promote better blood sugar regulation.")
-            recommendations.append("Incorporate yoga or tai chi into your routine to reduce stress levels and improve overall well-being, which can positively impact diabetes management.")
-            recommendations.append("Consider consulting with a registered dietitian to create a personalized meal plan that aligns with your diabetes management goals and lifestyle preferences.")
+            recommendations.append("-Explore mindful eating practices such as paying attention to hunger cues, practicing portion control, and savoring each bite to promote better blood sugar regulation.")
+            recommendations.append("-Incorporate yoga or tai chi into your routine to reduce stress levels and improve overall well-being, which can positively impact diabetes management.")
+            recommendations.append("-Consider consulting with a registered dietitian to create a personalized meal plan that aligns with your diabetes management goals and lifestyle preferences.")
         else:
-            recommendations.append("Prioritize regular physical activity that includes a combination of aerobic exercises, strength training, and flexibility exercises to support overall health and blood sugar control.")
-            recommendations.append("Stay informed about advances in diabetes management technologies such as continuous glucose monitoring systems and automated insulin delivery systems to enhance treatment outcomes.")
-            recommendations.append("Join a diabetes support group or online community to connect with others living with diabetes, share experiences, and gain valuable support and resources.")
+            recommendations.append("-Prioritize regular physical activity that includes a combination of aerobic exercises, strength training, and flexibility exercises to support overall health and blood sugar control.")
+            recommendations.append("-Stay informed about advances in diabetes management technologies such as continuous glucose monitoring systems and automated insulin delivery systems to enhance treatment outcomes.")
+            recommendations.append("-Join a diabetes support group or online community to connect with others living with diabetes, share experiences, and gain valuable support and resources.")
 
     if hypertension == 1:
-        recommendations.append("To manage hypertension, focus on a low-sodium diet rich in fruits, vegetables, whole grains, and lean proteins.")
+        recommendations.append("-To manage hypertension, focus on a low-sodium diet rich in fruits, vegetables, whole grains, and lean proteins.")
         if age <= 12:
-            recommendations.append("Encourage outdoor play and physical activities to promote heart health and manage blood pressure.")
-            recommendations.append("Limit salty snacks and processed foods, opting for healthier options like fruits and vegetables.")
-            recommendations.append("Stay hydrated by drinking water throughout the day.")
+            recommendations.append("-Encourage outdoor play and physical activities to promote heart health and manage blood pressure.")
+            recommendations.append("-Limit salty snacks and processed foods, opting for healthier options like fruits and vegetables.")
+            recommendations.append("-Stay hydrated by drinking water throughout the day.")
         elif 13 <= age <= 18:
-            recommendations.append("Participate in regular physical activities such as biking, dancing, or jogging to support heart health and control blood pressure.")
-            recommendations.append("Avoid excess caffeine and sugary beverages, which can elevate blood pressure.")
-            recommendations.append("Practice stress-reducing techniques like deep breathing or meditation to support heart health.")
+            recommendations.append("-Participate in regular physical activities such as biking, dancing, or jogging to support heart health and control blood pressure.")
+            recommendations.append("-Avoid excess caffeine and sugary beverages, which can elevate blood pressure.")
+            recommendations.append("-Practice stress-reducing techniques like deep breathing or meditation to support heart health.")
         elif 19 <= age <= 40:
-            recommendations.append("Experiment with different cooking methods such as grilling, steaming, or baking to prepare flavorful meals without adding excess salt.")
-            recommendations.append("Incorporate interval training or circuit workouts into your exercise routine to improve cardiovascular fitness and lower blood pressure.")
-            recommendations.append("Try incorporating mindfulness practices such as guided imagery or progressive muscle relaxation into your daily routine to manage stress and promote relaxation.")
+            recommendations.append("-Experiment with different cooking methods such as grilling, steaming, or baking to prepare flavorful meals without adding excess salt.")
+            recommendations.append("-Incorporate interval training or circuit workouts into your exercise routine to improve cardiovascular fitness and lower blood pressure.")
+            recommendations.append("-Try incorporating mindfulness practices such as guided imagery or progressive muscle relaxation into your daily routine to manage stress and promote relaxation.")
         elif 41 <= age <= 60:
-            recommendations.append("Include potassium-rich foods such as bananas, spinach, and avocados in your diet, as potassium can help counteract the effects of sodium on blood pressure.")
-            recommendations.append("Engage in activities that promote relaxation and stress reduction, such as gardening, listening to music, or spending time in nature.")
-            recommendations.append("Monitor your blood pressure regularly at home and keep a log to track changes over time, which can help inform treatment decisions and lifestyle modifications.")
+            recommendations.append("-Include potassium-rich foods such as bananas, spinach, and avocados in your diet, as potassium can help counteract the effects of sodium on blood pressure.")
+            recommendations.append("-Engage in activities that promote relaxation and stress reduction, such as gardening, listening to music, or spending time in nature.")
+            recommendations.append("-Monitor your blood pressure regularly at home and keep a log to track changes over time, which can help inform treatment decisions and lifestyle modifications.")
         else:
-            recommendations.append("Incorporate heart-healthy fats from sources such as nuts, seeds, and olive oil into your diet to help support cardiovascular health and lower blood pressure.")
-            recommendations.append("Practice mindful eating by slowing down during meals, chewing food thoroughly, and paying attention to hunger and fullness cues to prevent overeating.")
-            recommendations.append("Explore alternative therapies such as acupuncture, biofeedback, or massage therapy to complement traditional treatments for hypertension and promote overall well-being.")
+            recommendations.append("-Incorporate heart-healthy fats from sources such as nuts, seeds, and olive oil into your diet to help support cardiovascular health and lower blood pressure.")
+            recommendations.append("-Practice mindful eating by slowing down during meals, chewing food thoroughly, and paying attention to hunger and fullness cues to prevent overeating.")
+            recommendations.append("-Explore alternative therapies such as acupuncture, biofeedback, or massage therapy to complement traditional treatments for hypertension and promote overall well-being.")
 
     # Additional conditions based on datasets
     if not medications_data.empty:
-        recommendations.append("Remember to take your medications as prescribed to support your overall health.")
+        recommendations.append("-Remember to take your medications as prescribed to support your overall health.")
         
      # Additional recommendations based on medications
     # Check if the drug is in medications_data
     if (medications_data["DRUG"].astype(int).isin(drugs_data["DrugSourceID"].astype(int))).any():
         # Check if the drug is also in drugs_data
         if (drugs_data["MainSideEffect"] == "Immunosuppressants").any() and (medications_data["QTY"] > 0).any():
-            recommendations.append("Ensure adherence to your medication regimen and report any adverse effects to your healthcare provider for further evaluation.")
+            recommendations.append("-Ensure adherence to your medication regimen and report any adverse effects to your healthcare provider for further evaluation.")
 
     if not blood_pressure_data.empty:
         # Get the newest blood pressure readings
@@ -160,11 +160,11 @@ def generate_recommendation(patient_data, medications_data, blood_pressure_data,
         diastolic = blood_pressure_data["Diastolic"]
         
         if 130 <= systolic <= 139 or 80 <= diastolic <= 89:
-            recommendations.append("Your blood pressure is in Stage 1 hypertension range. Focus on lifestyle modifications such as diet and exercise to manage it.")
+            recommendations.append("-Your blood pressure is in Stage 1 hypertension range. Focus on lifestyle modifications such as diet and exercise to manage it.")
         elif systolic >= 140 or diastolic >= 90:
-            recommendations.append("Your blood pressure is in Stage 2 hypertension range. It's important to consult with your healthcare provider for proper management and treatment.")
+            recommendations.append("-Your blood pressure is in Stage 2 hypertension range. It's important to consult with your healthcare provider for proper management and treatment.")
         else:
-            recommendations.append("Your blood pressure is within healthy ranges. Continue monitoring it regularly.")
+            recommendations.append("-Your blood pressure is within healthy ranges. Continue monitoring it regularly.")
 
     if not weight_data.empty and not height_data.empty:
         # Get the newest weight and height readings
@@ -173,96 +173,96 @@ def generate_recommendation(patient_data, medications_data, blood_pressure_data,
         
         bmi = float(weight_data["RATE"]) / ((float(height_data["RATE"]) ** 2)* 703)  # Calculate BMI
         if bmi < 18.5:
-            recommendations.append("Your BMI indicates underweight. It's important to focus on gaining weight through a balanced diet rich in nutrient-dense foods and engaging in strength training exercises to build muscle mass.")
-            recommendations.append("Consider consulting with a dietitian to create a meal plan tailored to your needs and goals.")
+            recommendations.append("-Your BMI indicates underweight. It's important to focus on gaining weight through a balanced diet rich in nutrient-dense foods and engaging in strength training exercises to build muscle mass.")
+            recommendations.append("-Consider consulting with a dietitian to create a meal plan tailored to your needs and goals.")
         elif 18.5 <= bmi <= 25:
-            recommendations.append("Your BMI is within the healthy range. Continue to maintain a balanced diet and regular exercise routine to support overall health.")
+            recommendations.append("-Your BMI is within the healthy range. Continue to maintain a balanced diet and regular exercise routine to support overall health.")
         elif bmi > 25:
-            recommendations.append("Your BMI indicates overweight or obesity. It's essential to focus on weight management through dietary modifications and regular exercise.")
-            recommendations.append("Recommend incorporating a variety of physical activities such as cardio, strength training, and flexibility exercises into your routine.")
-            recommendations.append("Encourage adopting healthy eating habits such as portion control, reducing intake of processed foods and sugary beverages, and increasing consumption of fruits, vegetables, and lean proteins.")
+            recommendations.append("-Your BMI indicates overweight or obesity. It's essential to focus on weight management through dietary modifications and regular exercise.")
+            recommendations.append("-Recommend incorporating a variety of physical activities such as cardio, strength training, and flexibility exercises into your routine.")
+            recommendations.append("-Encourage adopting healthy eating habits such as portion control, reducing intake of processed foods and sugary beverages, and increasing consumption of fruits, vegetables, and lean proteins.")
 
     if not lab_tests_data.empty:
         # Get the newest LabTestResult
         lab_tests_data = lab_tests_data.sort_values(by="LabTestDatetimeTaken", ascending=False).iloc[0]
         if lab_tests_data["LabTestType"] == "HbA1C" and lab_tests_data["LabTestResult"] > 0:
             if lab_tests_data["LabTestResult"] < 7:
-                recommendations.append("Maintain your current diabetes management plan, including dietary modifications and regular physical activity, to keep HbA1c levels stable.")
+                recommendations.append("-Maintain your current diabetes management plan, including dietary modifications and regular physical activity, to keep HbA1c levels stable.")
             else:
-                recommendations.append("Consider reviewing your diabetes management strategies to optimize blood sugar control and improve HbA1c levels.")
+                recommendations.append("-Consider reviewing your diabetes management strategies to optimize blood sugar control and improve HbA1c levels.")
         elif lab_tests_data["LabTestType"] == "FBS" and lab_tests_data["LabTestResult"] > 0:
             if lab_tests_data["LabTestResult"] > 126:
-                recommendations.append("If fasting blood sugar levels are elevated, focus on dietary changes and exercise to help manage blood sugar levels.")
-                recommendations.append("Consider scheduling an appointment to discuss these results and potential treatment options.")
+                recommendations.append("-If fasting blood sugar levels are elevated, focus on dietary changes and exercise to help manage blood sugar levels.")
+                recommendations.append("-Consider scheduling an appointment to discuss these results and potential treatment options.")
             else:
-                recommendations.append("Discuss your lab test results to identify areas for improvement and develop a plan for optimizing your health.")
+                recommendations.append("-Discuss your lab test results to identify areas for improvement and develop a plan for optimizing your health.")
         elif lab_tests_data["LabTestType"] == "RBS" and lab_tests_data["LabTestResult"] > 0:
             if lab_tests_data["LabTestResult"] > 200:
-                recommendations.append("Your random blood sugar levels are elevated. It's important to monitor your diet and lifestyle habits.")
-                recommendations.append("Consider scheduling an appointment with a healthcare provider for further evaluation and guidance.")
+                recommendations.append("-Your random blood sugar levels are elevated. It's important to monitor your diet and lifestyle habits.")
+                recommendations.append("-Consider scheduling an appointment with a healthcare provider for further evaluation and guidance.")
             else:
-                recommendations.append("Continue monitoring your random blood sugar levels and follow a balanced diet to maintain stable blood sugar levels.")
+                recommendations.append("-Continue monitoring your random blood sugar levels and follow a balanced diet to maintain stable blood sugar levels.")
 
     # Include recommendations based on comorbidities
     for condition in comorbidities:
         if "HYPERTENSION" in condition.upper():
-            recommendations.append("You have a comorbidity of hypertension. It's important to manage your blood pressure through lifestyle modifications such as diet, exercise, and medication adherence.")
-            recommendations.append("Follow a diet rich in fruits, vegetables, whole grains, and lean proteins, and limit sodium intake.")
-            recommendations.append("Engage in regular physical activity, such as brisk walking, swimming, or cycling, to support heart health.")
-            recommendations.append("Monitor your blood pressure regularly and consult with your healthcare provider for personalized guidance.")
+            recommendations.append("-You have a comorbidity of hypertension. It's important to manage your blood pressure through lifestyle modifications such as diet, exercise, and medication adherence.")
+            recommendations.append("-Follow a diet rich in fruits, vegetables, whole grains, and lean proteins, and limit sodium intake.")
+            recommendations.append("-Engage in regular physical activity, such as brisk walking, swimming, or cycling, to support heart health.")
+            recommendations.append("-Monitor your blood pressure regularly and consult with your healthcare provider for personalized guidance.")
         elif "DIABETES" in condition.upper():
-            recommendations.append("You have a comorbidity of diabetes. Focus on maintaining stable blood sugar levels through diet, exercise, regular monitoring, and medication adherence.")
-            recommendations.append("Choose carbohydrates that have a low glycemic index to prevent spikes in blood sugar levels.")
-            recommendations.append("Incorporate regular exercise into your routine, such as aerobic activities, strength training, and flexibility exercises.")
-            recommendations.append("Monitor your blood sugar levels closely and consult with your healthcare provider for adjustments to your diabetes management plan.")
+            recommendations.append("-You have a comorbidity of diabetes. Focus on maintaining stable blood sugar levels through diet, exercise, regular monitoring, and medication adherence.")
+            recommendations.append("-Choose carbohydrates that have a low glycemic index to prevent spikes in blood sugar levels.")
+            recommendations.append("-Incorporate regular exercise into your routine, such as aerobic activities, strength training, and flexibility exercises.")
+            recommendations.append("-Monitor your blood sugar levels closely and consult with your healthcare provider for adjustments to your diabetes management plan.")
         elif "CVA" in condition.upper():
-            recommendations.append("You have a history of cerebrovascular accident (CVA). It's important to prioritize heart health and reduce risk factors for future cardiovascular events.")
-            recommendations.append("Follow a heart-healthy diet that includes plenty of fruits, vegetables, whole grains, and lean proteins.")
-            recommendations.append("Engage in regular physical activity to improve circulation and overall cardiovascular health.")
-            recommendations.append("Take medications as prescribed by your healthcare provider to manage risk factors such as high blood pressure and high cholesterol.")
+            recommendations.append("-You have a history of cerebrovascular accident (CVA). It's important to prioritize heart health and reduce risk factors for future cardiovascular events.")
+            recommendations.append("-Follow a heart-healthy diet that includes plenty of fruits, vegetables, whole grains, and lean proteins.")
+            recommendations.append("-Engage in regular physical activity to improve circulation and overall cardiovascular health.")
+            recommendations.append("-Take medications as prescribed by your healthcare provider to manage risk factors such as high blood pressure and high cholesterol.")
         elif "B-COMPLEX DEFIC NEC" in condition.upper():
-            recommendations.append("You have a deficiency in B-complex vitamins. Focus on incorporating foods rich in B vitamins into your diet to address this deficiency.")
-            recommendations.append("Include sources of B vitamins such as whole grains, leafy greens, legumes, nuts, seeds, and lean meats in your meals.")
-            recommendations.append("Consider taking a B-complex supplement under the guidance of a healthcare professional to ensure adequate intake.")
+            recommendations.append("-You have a deficiency in B-complex vitamins. Focus on incorporating foods rich in B vitamins into your diet to address this deficiency.")
+            recommendations.append("-Include sources of B vitamins such as whole grains, leafy greens, legumes, nuts, seeds, and lean meats in your meals.")
+            recommendations.append("-Consider taking a B-complex supplement under the guidance of a healthcare professional to ensure adequate intake.")
         elif "CHR APICAL PERIODONTITIS" in condition.upper():
-            recommendations.append("You have chronic apical periodontitis. Good oral hygiene is crucial to prevent further inflammation and infection.")
-            recommendations.append("Brush your teeth at least twice a day and floss daily to remove plaque and bacteria from the teeth and gums.")
-            recommendations.append("Schedule regular dental check-ups and cleanings to monitor the condition of your teeth and gums.")
+            recommendations.append("-You have chronic apical periodontitis. Good oral hygiene is crucial to prevent further inflammation and infection.")
+            recommendations.append("-Brush your teeth at least twice a day and floss daily to remove plaque and bacteria from the teeth and gums.")
+            recommendations.append("-Schedule regular dental check-ups and cleanings to monitor the condition of your teeth and gums.")
         elif "FOLLOW-UP EXAM NEC" in condition.upper():
-            recommendations.append("You have a follow-up exam scheduled. Make sure to attend the appointment and discuss any concerns or questions with your healthcare provider.")
-            recommendations.append("Prepare for the appointment by keeping track of your symptoms, medications, and any changes in your health since your last visit.")
-            recommendations.append("Ask about any recommended screenings or tests to monitor your condition and stay proactive about your health.")
+            recommendations.append("-You have a follow-up exam scheduled. Make sure to attend the appointment and discuss any concerns or questions with your healthcare provider.")
+            recommendations.append("-Prepare for the appointment by keeping track of your symptoms, medications, and any changes in your health since your last visit.")
+            recommendations.append("-Ask about any recommended screenings or tests to monitor your condition and stay proactive about your health.")
         elif "ACUTE UPPER RESPIRATORY INFECTION, UNSPECIFIED" in condition.upper():
-            recommendations.append("You have been diagnosed with acute upper respiratory infection. Rest, stay hydrated, and consider over-the-counter medications for symptom relief.")
-            recommendations.append("Practice good hand hygiene and respiratory etiquette to prevent the spread of infection to others.")
+            recommendations.append("-You have been diagnosed with acute upper respiratory infection. Rest, stay hydrated, and consider over-the-counter medications for symptom relief.")
+            recommendations.append("-Practice good hand hygiene and respiratory etiquette to prevent the spread of infection to others.")
         elif "TYPE 2 DIABETES MELLITUS WITH HYPERGLYCEMIA" in condition.upper():
-            recommendations.append("You have been diagnosed with type 2 diabetes mellitus with hyperglycemia. Follow your healthcare provider's instructions for managing your blood sugar levels.")
-            recommendations.append("Monitor your blood sugar regularly and take medications as prescribed.")
-            recommendations.append("Adopt a healthy lifestyle with a balanced diet, regular exercise, and stress management techniques.")
+            recommendations.append("-You have been diagnosed with type 2 diabetes mellitus with hyperglycemia. Follow your healthcare provider's instructions for managing your blood sugar levels.")
+            recommendations.append("-Monitor your blood sugar regularly and take medications as prescribed.")
+            recommendations.append("-Adopt a healthy lifestyle with a balanced diet, regular exercise, and stress management techniques.")
         elif "ACUTE PAIN DUE TO TRAUMA" in condition.upper():
-            recommendations.append("You are experiencing acute pain due to trauma. Follow your healthcare provider's recommendations for pain management, including medication, rest, and ice or heat therapy.")
-            recommendations.append("Seek medical attention if the pain persists or worsens, or if you experience any concerning symptoms.")
+            recommendations.append("-You are experiencing acute pain due to trauma. Follow your healthcare provider's recommendations for pain management, including medication, rest, and ice or heat therapy.")
+            recommendations.append("-Seek medical attention if the pain persists or worsens, or if you experience any concerning symptoms.")
         elif "LOW BACK PAIN" in condition.upper():
-            recommendations.append("You have been diagnosed with low back pain. Practice good posture, use proper lifting techniques, and engage in gentle stretching and strengthening exercises to alleviate discomfort.")
-            recommendations.append("Consider physical therapy or chiropractic care for targeted treatment and pain relief.")
+            recommendations.append("-You have been diagnosed with low back pain. Practice good posture, use proper lifting techniques, and engage in gentle stretching and strengthening exercises to alleviate discomfort.")
+            recommendations.append("-Consider physical therapy or chiropractic care for targeted treatment and pain relief.")
         elif "COUGH" in condition.upper():
-            recommendations.append("You are experiencing a cough. Stay hydrated, get plenty of rest, and consider over-the-counter remedies such as cough drops or cough syrup for relief.")
-            recommendations.append("If the cough persists for more than a few days or is accompanied by other symptoms, consult with your healthcare provider.")
+            recommendations.append("-You are experiencing a cough. Stay hydrated, get plenty of rest, and consider over-the-counter remedies such as cough drops or cough syrup for relief.")
+            recommendations.append("-If the cough persists for more than a few days or is accompanied by other symptoms, consult with your healthcare provider.")
         elif "OTHER WAITING PERIOD FOR INVESTIGATION AND TREATMENT" in condition.upper():
-            recommendations.append("You are waiting for investigation and treatment. Stay informed about your upcoming appointments or procedures, and follow any pre-appointment instructions provided by your healthcare provider.")
-            recommendations.append("If you have any concerns or questions about the waiting period, don't hesitate to reach out to your healthcare provider for clarification.")
+            recommendations.append("-You are waiting for investigation and treatment. Stay informed about your upcoming appointments or procedures, and follow any pre-appointment instructions provided by your healthcare provider.")
+            recommendations.append("-If you have any concerns or questions about the waiting period, don't hesitate to reach out to your healthcare provider for clarification.")
         elif "ENCOUNTER FOR OTHER GENERAL EXAMINATION" in condition.upper():
-            recommendations.append("You have an encounter scheduled for a general examination. Make sure to attend the appointment and discuss any health concerns or questions with your healthcare provider.")
-            recommendations.append("Prepare for the appointment by compiling a list of medications, symptoms, and any changes in your health since your last visit.")
+            recommendations.append("-You have an encounter scheduled for a general examination. Make sure to attend the appointment and discuss any health concerns or questions with your healthcare provider.")
+            recommendations.append("-Prepare for the appointment by compiling a list of medications, symptoms, and any changes in your health since your last visit.")
         elif "ILLNESS, UNSPECIFIED" in condition.upper():
-            recommendations.append("You have been diagnosed with an unspecified illness. Follow your healthcare provider's recommendations for symptom management and treatment.")
-            recommendations.append("If you experience any concerning symptoms or if your condition worsens, seek medical attention promptly.")
+            recommendations.append("-You have been diagnosed with an unspecified illness. Follow your healthcare provider's recommendations for symptom management and treatment.")
+            recommendations.append("-If you experience any concerning symptoms or if your condition worsens, seek medical attention promptly.")
         elif "URINARY TRACT INFECTION, SITE NOT SPECIFIED" in condition.upper():
-            recommendations.append("You have been diagnosed with a urinary tract infection. Drink plenty of water, avoid irritants like caffeine and alcohol, and take prescribed antibiotics as directed.")
-            recommendations.append("Practice good hygiene, including wiping from front to back, to prevent the spread of bacteria.")
+            recommendations.append("-You have been diagnosed with a urinary tract infection. Drink plenty of water, avoid irritants like caffeine and alcohol, and take prescribed antibiotics as directed.")
+            recommendations.append("-Practice good hygiene, including wiping from front to back, to prevent the spread of bacteria.")
         elif "SHORTNESS OF BREATH" in condition.upper():
-            recommendations.append("You are experiencing shortness of breath. Rest, avoid triggers like smoke or allergens, and seek medical attention if the symptoms are severe or persistent.")
-            recommendations.append("If you have a known respiratory condition, follow your healthcare provider's instructions for managing symptoms and seek prompt medical care if needed.")
+            recommendations.append("-You are experiencing shortness of breath. Rest, avoid triggers like smoke or allergens, and seek medical attention if the symptoms are severe or persistent.")
+            recommendations.append("-If you have a known respiratory condition, follow your healthcare provider's instructions for managing symptoms and seek prompt medical care if needed.")
 
     return recommendations
 
@@ -371,7 +371,7 @@ def check_patient_id(patient_input: PatientInput):
     else:
         # If patient ID does not exist, return an error message
         raise HTTPException(status_code=404, detail="Patient ID not found")
-        #raise HTTPException(status_code=500, detail="Patient ID not found")
+        
 
 # Define endpoint to serve data
 @app.get("/patient_data")
