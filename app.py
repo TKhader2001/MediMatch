@@ -49,7 +49,10 @@ def load_datasets(connections):
     comorbidities_df = pd.read_sql("SELECT * FROM dbo.Comorbidities", connections)
     # Load Last_Recommendation dataset
     MedicationsView_df = pd.read_sql("SELECT * FROM MedicationsView ORDER BY ISSUE_DATE;", connections)    
-    return patients_df, medications_df, drugs_df, blood_pressure_df, height_df, weight_df, lab_tests_df, comorbidities_df, MedicationsView_df
+    # Load Users dataset
+    Users_df = pd.read_sql("SELECT * FROM dbo.Users", connections)    
+    
+    return patients_df, medications_df, drugs_df, blood_pressure_df, height_df, weight_df, lab_tests_df, comorbidities_df, MedicationsView_df,Users_df
 
 # Function to fetch patient data from the loaded datasets
 def fetch_patient_data(patients_df, medications_df, drugs_df, blood_pressure_df, height_df, weight_df, lab_tests_df, comorbidities_df,MedicationsView_df, patient_id):
@@ -268,7 +271,7 @@ def generate_recommendation(patient_data, medications_data, blood_pressure_data,
 
 
 # Load datasets
-patients_df, medications_df, drugs_df, blood_pressure_df, height_df, weight_df, lab_tests_df, comorbidities_df,MedicationsView_df = load_datasets(connections)
+patients_df, medications_df, drugs_df, blood_pressure_df, height_df, weight_df, lab_tests_df, comorbidities_df,MedicationsView_df,Users_df = load_datasets(connections)
 
 # Example patient ID
 ####patient_id = 6189
@@ -308,11 +311,6 @@ def get_blood_pressure(bp_data):
     except IndexError:
         return "Null"
 
-# Define a function to convert int64 objects to Python native types
-def convert_to_python_type(value):
-    if isinstance(value, np.int64):
-        return int(value)  # Convert int64 to int
-    return value
 users = {
     "1234": "2001",
     "20201213": "Tar@2001",
@@ -327,9 +325,11 @@ class User(BaseModel):
 def login(user: User):
     logging.info("Received login request: %s", user)
     # Check if the provided username exists in the dataset
-    if user.username in users:
+    if user.username in Users_df['Username'].values:
+        # Find the row corresponding to the provided username
+        user_row = Users_df[Users_df['Username'] == user.username].iloc[0]
         # Check if the provided password matches the stored password for the username
-        if users[user.username] == user.password:
+        if user_row['Password'] == user.password:
             return {"message": "Login successful"}
         else:
             # If passwords don't match, raise an HTTPException with status code 401 (Unauthorized)
